@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/app02-calculo_imc.iml" filepath="$PROJECT_DIR$/.idea/app02-calculo_imc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/calculo_imc.iml" filepath="$PROJECT_DIR$/calculo_imc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/calculo_imc_android.iml" filepath="$PROJECT_DIR$/android/calculo_imc_android.iml" />
     </modules>
   </component>
 </project>
