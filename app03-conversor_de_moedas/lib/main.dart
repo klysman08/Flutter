@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
   double euro;
 
   void _realChanged(String text) {
-    if(text.isEmpty) {
+    if (text.isEmpty) {
       _clearAll();
       return;
     }
@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
   }
 
   void _dolarChanged(String text) {
-    if(text.isEmpty) {
+    if (text.isEmpty) {
       _clearAll();
       return;
     }
@@ -60,17 +60,16 @@ class _HomeState extends State<Home> {
   }
 
   void _euroChanged(String text) {
-    if(text.isEmpty) {
+    if (text.isEmpty) {
       _clearAll();
       return;
     }
     double euro = double.parse(text);
     realController.text = (euro * this.dolar).toStringAsFixed(2);
     dolarController.text = (euro * this.dolar / euro).toStringAsFixed(2);
-
   }
 
-  void _clearAll(){
+  void _clearAll() {
     realController.text = "";
     dolarController.text = "";
     euroController.text = "";
@@ -114,12 +113,16 @@ class _HomeState extends State<Home> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: <Widget>[
-                          Icon(Icons.monetization_on, size: 150.0, color: Colors.amber),
-                        buildTextField("Reais", "R\$", realController, _realChanged),
-                        Divider(),
-                        buildTextField("Dólares", "US\$", dolarController, _dolarChanged),
-                        Divider(),
-                        buildTextField("Euros", "€", euroController, _euroChanged),
+                          Icon(Icons.monetization_on,
+                              size: 150.0, color: Colors.amber),
+                          buildTextField(
+                              "Reais", "R\$", realController, _realChanged),
+                          Divider(),
+                          buildTextField("Dólares", "US\$", dolarController,
+                              _dolarChanged),
+                          Divider(),
+                          buildTextField(
+                              "Euros", "€", euroController, _euroChanged),
                         ],
                       ),
                     );
