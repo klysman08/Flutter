@@ -79,7 +79,7 @@ class _HomeState extends State<Home> {
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                         labelText: "Peso em KG",
-                        labelStyle: TextStyle(color: Colors.purple[800])),
+                        labelStyle: TextStyle(color: Colors.purple[400])),
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.purple, fontSize: 25.0),
                     controller: weightController,
