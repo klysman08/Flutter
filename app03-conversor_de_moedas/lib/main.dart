@@ -31,7 +31,6 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
-
 class _HomeState extends State<Home> {
   final realController = TextEditingController();
   final dolarController = TextEditingController();
@@ -43,7 +42,7 @@ class _HomeState extends State<Home> {
   void _realChanged(String text) {
     if (text.isEmpty) {
       _clearAll();
-      return; 
+      return;
     }
     double real = double.parse(text);
     dolarController.text = (real / dolar).toStringAsFixed(2);
@@ -70,12 +69,10 @@ class _HomeState extends State<Home> {
     dolarController.text = (euro * this.dolar / euro).toStringAsFixed(2);
   }
 
-
   void _clearAll() {
     realController.text = "";
     dolarController.text = "";
     euroController.text = "";
-    
   }
 
   @override
